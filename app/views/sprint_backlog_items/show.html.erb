@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Backlog item:</strong>
+  <%= @sprint_backlog_item.backlog_item_id %>
+</p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @sprint_backlog_item.activity %>
+</p>
+
+<p>
+  <strong>Iteration:</strong>
+  <%= @sprint_backlog_item.iteration %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @sprint_backlog_item.state %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @sprint_backlog_item.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_sprint_backlog_item_path(@sprint_backlog_item) %> |
+<%= link_to 'Back', sprint_backlog_items_path %>

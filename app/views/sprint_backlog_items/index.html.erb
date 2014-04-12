@@ -1,0 +1,35 @@
+<h1>Listing sprint_backlog_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Backlog item</th>
+      <th>Activity</th>
+      <th>Iteration</th>
+      <th>State</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sprint_backlog_items.each do |sprint_backlog_item| %>
+      <tr>
+        <td><%= sprint_backlog_item.backlog_item_id %></td>
+        <td><%= sprint_backlog_item.activity %></td>
+        <td><%= sprint_backlog_item.iteration %></td>
+        <td><%= sprint_backlog_item.state %></td>
+        <td><%= sprint_backlog_item.user_id %></td>
+        <td><%= link_to 'Show', sprint_backlog_item %></td>
+        <td><%= link_to 'Edit', edit_sprint_backlog_item_path(sprint_backlog_item) %></td>
+        <td><%= link_to 'Destroy', sprint_backlog_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sprint backlog item', new_sprint_backlog_item_path %>

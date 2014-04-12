@@ -1,0 +1,37 @@
+<%= form_for(@sprint_backlog_item) do |f| %>
+  <% if @sprint_backlog_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sprint_backlog_item.errors.count, "error") %> prohibited this sprint_backlog_item from being saved:</h2>
+
+      <ul>
+      <% @sprint_backlog_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :backlog_item_id %><br>
+    <%= f.number_field :backlog_item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :activity %><br>
+    <%= f.text_field :activity %>
+  </div>
+  <div class="field">
+    <%= f.label :iteration %><br>
+    <%= f.text_field :iteration %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

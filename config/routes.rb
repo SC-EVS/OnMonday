@@ -1,4 +1,16 @@
 OnMonday::Application.routes.draw do
+  resources :sprints
+
+  resources :sprint_backlog_items
+
+  resources :backlog_items
+
+  resources :teams
+
+  resources :projects
+
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
